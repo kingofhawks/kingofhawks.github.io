@@ -1,0 +1,22 @@
+---
+layout: post
+title:  Programming IDE and Editor
+---
+There are so many IDE out there, my preferred ones included:
+* IDEA: [Intellij](https://www.jetbrains.com/idea/?utm_expid=85132606-37.5-enLWJnTxyshuS9opeVLA.0) is the great Java IDE with community version.
+* [PyCharm](http://www.jetbrains.com/pycharm/): Also come from Intellij, the most wonderful Python IDE.
+* [Atom](https://atom.io/): A hackable Editor based on Node.JS and Eletron.
+* [Brackets](http://brackets.io/): A modern, open source text editor that understands web design.
+* [Sublime](http://www.sublimetext.com/): a sophisticated text editor for code, markup and prose.
+* [VS Code](https://code.visualstudio.com/): Cross-platform editor to build and debug modern web and cloud applications, based on Electron by Microsoft.
+
+There are others need to address here:
+* Eclipse
+* Netbeans
+* Pydev
+* [LightTable](https://github.com/LightTable/LightTable)
+* Eric
+* Vim
+* Cloud9
+* Lime Text
+* neovim
