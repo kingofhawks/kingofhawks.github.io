@@ -148,5 +148,6 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 References:
 * [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 * [Self-Executing Anonymous Functions](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/)
+* [Immediately-Invoked Function Expression (IIFE)](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
 
 
