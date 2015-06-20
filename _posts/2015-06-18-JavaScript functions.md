@@ -105,9 +105,9 @@ A(1); // logs 6 (1 + 2 + 3)
 
 In this example, C accesses B's y and A's x. This can be done because:
 
-* 1. B forms a closure including A, i.e. B can access A's arguments and variables.
-* 2. C forms a closure including B.
-* 3. Because B's closure includes A, C's closure includes A, C can access both B and A's arguments and variables. In other words, C chains the scopes of B and A in that order.
+1. B forms a closure including A, i.e. B can access A's arguments and variables.
+2. C forms a closure including B.
+3. Because B's closure includes A, C's closure includes A, C can access both B and A's arguments and variables. In other words, C chains the scopes of B and A in that order.
 
 
 ## Using the arguments object
@@ -120,20 +120,19 @@ where i is the ordinal number of the argument, starting at zero. So, the first a
 Using the arguments object, you can call a function with more arguments than it is formally declared to accept. This is often useful if you don't know in advance how many arguments will be passed to the function. You can use arguments.length to determine the number of arguments actually passed to the function, and then access each argument using the arguments object.
 
 For example, consider a function that concatenates several strings. The only formal argument for the function is a string that specifies the characters that separate the items to concatenate. The function is defined as follows:
-<code><pre>
-function myConcat(separator) {
-   var result = "", // initialize list
-       i;
-   // iterate through arguments
-   for (i = 1; i < arguments.length; i++) {
-      result += arguments[i] + separator;
-   }
-   return result;
-}
-</code></pre>
+
+> function myConcat(separator) {
+>   var result = "", // initialize list
+>      i;
+>   // iterate through arguments
+>   for (i = 1; i < arguments.length; i++) {
+>      result += arguments[i] + separator;
+>   }
+>   return result;
+> }
+
 
 You can pass any number of arguments to this function, and it concatenates each argument into a string "list":
-
 <code><pre>
 // returns "red, orange, blue, "
 myConcat(", ", "red", "orange", "blue");
@@ -145,9 +144,23 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 </code></pre>
 
+## The IIFE Pattern: Introducing a New Scope
+
+Sometimes you want to introduce a new variable scope—for example, *to prevent a variable from becoming global*. In JavaScript, you can’t use a block to do so; you must use a function. But there is a pattern for using a function in a block-like manner. It is called *IIFE* (immediately invoked function expression, pronounced “iffy”):
+<code><pre>
+(function () {  // open IIFE
+    var tmp = ...;  // not a global variable
+}());  // close IIFE
+</code></pre>
+
+Be sure to type the preceding example exactly as shown (apart from the comments). An IIFE is a function expression that is called immediately after you define it. Inside the function, a new scope exists, preventing tmp from becoming global. Consult [Introducing a New Scope via an IIFE](http://speakingjs.com/es5/ch16.html#iife) for details on IIFEs.
+
+
 References:
 * [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
 * [Self-Executing Anonymous Functions](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/)
 * [Immediately-Invoked Function Expression (IIFE)](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
+* [speakingjs](http://speakingjs.com/es5/ch01.html#_functions)
+* [exploring-es6](https://leanpub.com/exploring-es6/read)
 
 
