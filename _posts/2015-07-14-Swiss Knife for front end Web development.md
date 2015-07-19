@@ -10,18 +10,26 @@ A generator is basically a plugin that can be run with the `yo` command to scaff
 
 The Yeoman workflow comprises three types of tools for improving your productivity and satisfaction when building a web app: the scaffolding tool (yo), the build tool (Grunt, Gulp, etc) and the package manager (like Bower and npm).
 
+It is rather hard to install Yeoman under Windows and China, something to be comment here:
+
+* change npm registry source: npm config set registry https://registry.npm.taobao.org
+
+* install yo: npm install -g yo
+
+* Manually add this path to Windows PATH: C:\Users\Simon\AppData\Roaming\npm
+
 
 
 ## Dependency management
 
 ### Bower
 
-Bower is the package manager for Web.
+[Bower](http://bower.io/) is the package manager for Web.
 
 
 ### NPM
 
-NPM is the package manager for Node.
+[NPM](https://www.npmjs.com/) is the package manager for Node.It comes with Node now.
 
 
 ### NPM browserify
@@ -68,4 +76,5 @@ Brunch also support Skeletons which is basically an application boilerplate that
 - [Task Runner Compare2](http://brunch.io/compare.html)
 - [Grunt vs Gulp](http://sixrevisions.com/web-development/grunt-vs-gulp/)
 - [Module System](http://webpack.github.io/docs/motivation.html)
+- [Install Yoeman on Windows](https://github.com/joyent/node/issues/4356)
 
