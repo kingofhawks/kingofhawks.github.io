@@ -30,7 +30,6 @@ It is rather simple to use Traceur in browser:
 <pre><code>
 <!DOCTYPE html>
 <html>
-  ...
   <body>
     <h1 id="message"></h1>
     <script src="https://google.github.io/traceur-compiler/bin/traceur.js"></script>
@@ -50,7 +49,6 @@ It is rather simple to use Traceur in browser:
       var greeter = new Greeter('Hello, world!');
       greeter.greet();
     </script>
-    ...
   </body>
 </html>
 </code></pre>
