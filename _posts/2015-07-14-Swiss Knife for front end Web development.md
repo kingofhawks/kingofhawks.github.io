@@ -70,6 +70,31 @@ Brunch also support Skeletons which is basically an application boilerplate that
 ### Broccoli
 [Broccoli](https://github.com/broccolijs/broccoli) is a less popular, fast, reliable asset pipeline, supporting constant-time rebuilds and compact build definitions. 
 
+### jspm
+
+### SystemJS
+
+## Test
+
+### Mocha
+
+### PhatomJS
+
+### Karma
+
+### Jasmine
+
+### Chai
+
+
+### Sinon.js
+
+
+### ESLint
+
+### JSLint
+
+
 
 ### Reference
 - [Task Runner Compare](https://github.com/brunch/brunch-guide/blob/master/content/en/chapter01-whats-brunch.md#brunch-vs-others)
@@ -77,4 +102,5 @@ Brunch also support Skeletons which is basically an application boilerplate that
 - [Grunt vs Gulp](http://sixrevisions.com/web-development/grunt-vs-gulp/)
 - [Module System](http://webpack.github.io/docs/motivation.html)
 - [Install Yoeman on Windows](https://github.com/joyent/node/issues/4356)
+- [Front End Tools](http://reactkungfu.com/2015/07/the-hitchhikers-guide-to-modern-javascript-tooling/?utm_source=javascriptweekly&utm_medium=email)
 
