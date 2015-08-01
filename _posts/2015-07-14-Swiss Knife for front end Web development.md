@@ -103,4 +103,5 @@ Brunch also support Skeletons which is basically an application boilerplate that
 - [Module System](http://webpack.github.io/docs/motivation.html)
 - [Install Yoeman on Windows](https://github.com/joyent/node/issues/4356)
 - [Front End Tools](http://reactkungfu.com/2015/07/the-hitchhikers-guide-to-modern-javascript-tooling/?utm_source=javascriptweekly&utm_medium=email)
+- [Browserfy vs WebPack](https://medium.com/@housecor/browserify-vs-webpack-b3d7ca08a0a9)
 
