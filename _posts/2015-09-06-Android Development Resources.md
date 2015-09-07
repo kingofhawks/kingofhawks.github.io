@@ -77,4 +77,6 @@ You just need to "Run" in Android Studio, and select the real device.
 
 [Gradle](http://gradle.org/)
 
+[Android Best Practice](https://github.com/futurice/android-best-practices)
+
 
