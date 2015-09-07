@@ -1,10 +1,4 @@
-### Android Development Resources
-
-[Android Official Toturial Chinese](http://hukai.me/android-training-course-in-chinese/index.html)
-
-[Android Toturil](http://www.vogella.com/tutorials/android.html)
-
-[Coursera Android](https://github.com/aporter/coursera-android)
+## Android Development Resources
 
 
 ### The concept you need to know for Android beginners
@@ -57,4 +51,26 @@ When you debug Android APP on real device, you need first enable "USB Debug" on 
 When you run APP directly on Mi 3C, you need to confirm USB debug on device. 
 
 You just need to "Run" in Android Studio, and select the real device.
+
+
+### Reference
+
+[Android Official Toturial Chinese](http://hukai.me/android-training-course-in-chinese/index.html)
+
+[Android Toturil](http://www.vogella.com/tutorials/android.html)
+
+[Coursera Android](https://github.com/aporter/coursera-android)
+
+[CodePath](http://guides.codepath.com/android)
+
+[Android Open Project](https://github.com/Trinea/android-open-project)
+
+[Android UI](https://github.com/wasabeef/awesome-android-ui)
+
+[Android Bootstrap](https://github.com/Bearded-Hen/Android-Bootstrap)
+
+[Awesome Android](https://github.com/snowdream/awesome-android)
+
+[MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+
 
