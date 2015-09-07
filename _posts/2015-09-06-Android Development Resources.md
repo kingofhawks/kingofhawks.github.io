@@ -44,11 +44,13 @@
 
 When you debug Android APP on real device, you need first enable "USB Debug" on device. Then install USB driver on PC.
 
-* For Mi 3C, install [小米手机助手](http://zhushou.xiaomi.com/)
+* For Mi 3C, install [小米手机助手](http://zhushou.xiaomi.com/) or manually install USB driver as [Mi 3C USB Driver](http://www.xiaomi.cn/content-19-6735-1.html)
 
 * For Sumsung phone, install [Kies](http://www.samsung.com/cn/support/usefulsoftware/KIES/)
 
-When you run APP directly on Mi 3C, you need to confirm USB debug on device. 
+* [Install USB Driver on Windows](http://developer.android.com/tools/extras/oem-usb.html)
+
+When you run APP directly on Mi 3C, you need first make sure your device turn on USB debug mode. 
 
 You just need to "Run" in Android Studio, and select the real device.
 
@@ -72,5 +74,7 @@ You just need to "Run" in Android Studio, and select the real device.
 [Awesome Android](https://github.com/snowdream/awesome-android)
 
 [MPAndroidChart](https://github.com/PhilJay/MPAndroidChart)
+
+[Gradle](http://gradle.org/)
 
 
