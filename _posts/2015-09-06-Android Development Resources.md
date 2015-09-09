@@ -44,6 +44,22 @@
 
 ### Intent
 
+Intent is a powerful concept within the Android universe. An intent is a message that can be thought of as a request that is given to either an
+
+activity within your own app, an external application, or a built-in Android service.
+
+Think of an intent as a way for an Activity to communicate with the outside Android world. A few key tasks that an intent might be used for within
+
+your apps:
+
+* Take the user to another screen (activity) within your application
+
+* Take the user to a particular URL within the Android web browser
+
+* Take the user to the camera to have them take a picture
+
+* Initiate a call for the user to a given number
+
 
 
 When you debug Android APP on real device, you need first enable "USB Debug" on device. Then install USB driver on PC.
