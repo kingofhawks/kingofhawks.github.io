@@ -10,9 +10,9 @@
 * Context
 
 
-### Android Application Components
+### Core Android Application Components
 
-* Activity
+* Activity: The "C" of MVC, interact with layout
 
 * BroadcastReceiver
 
@@ -23,9 +23,9 @@
 
 ### UI Components
 
-* View
+* View: UI Widgets
 
-* Layout Manager
+* Layout Manager(ViewGroup): container of View
 
 * Fragment
 
@@ -40,6 +40,10 @@
 ### Resources
 
 * Resource IDs and R.java
+
+
+### Intent
+
 
 
 When you debug Android APP on real device, you need first enable "USB Debug" on device. Then install USB driver on PC.
