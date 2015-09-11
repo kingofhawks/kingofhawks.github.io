@@ -36,6 +36,12 @@
 
 * Permissions
 
+Andorid default does not allow network access, you need to add these lines to manifest:
+<pre><code>
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+</code></pre>    
+
 
 ### Resources
 
@@ -59,6 +65,40 @@ your apps:
 * Take the user to the camera to have them take a picture
 
 * Initiate a call for the user to a given number
+
+
+### Action Bar
+
+The ActionBar is a consistent navigation element that is standard throughout modern Android applications. The ActionBar can consist of:
+
+
+* An application icon
+
+* An application or activity-specific title
+
+* Primary action buttons for an activity
+
+* Consistent navigation (including tabbed UI)
+
+You need to define action buttons in /res/menu XML.
+
+
+### ToolBar
+
+ToolBar was introduced in Android Lollipop, API 21 release and is a complete replacement to ActionBar.It's a ViewGroup so you can place it
+
+anywhere in your layout. ToolBar also provides greater control to customize its appearance for the same reason.
+
+
+### The things you cannot do in UI thread
+
+* Opening a Socket connection (i.e. new Socket()).
+
+* HTTP requests (i.e. HTTPClient and HTTPUrlConnection).
+
+* Attempting to connect to a remote MySQL database.
+
+* Downloading a file (i.e. Downloader.downloadFile()).
 
 
 
@@ -98,5 +138,9 @@ You just need to "Run" in Android Studio, and select the real device.
 [Gradle](http://gradle.org/)
 
 [Android Best Practice](https://github.com/futurice/android-best-practices)
+
+[NetworkOnMainThreadException](http://www.androiddesignpatterns.com/2012/06/app-force-close-honeycomb-ics.html)
+
+[Retrofit](http://square.github.io/retrofit/)
 
 
