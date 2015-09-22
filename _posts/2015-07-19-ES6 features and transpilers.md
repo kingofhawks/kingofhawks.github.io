@@ -63,3 +63,7 @@ It is rather simple to use Traceur in browser:
 * [next ES](https://github.com/google/traceur-compiler/wiki/LanguageFeatures)
 
 * [Babel Tutorial](http://www.tutorialsavvy.com/2015/05/next-generation-javascript-with-babel.html/)
+
+* [ponyfoo](http://ponyfoo.com/)
+
+* [ES6 in depth](https://hacks.mozilla.org/category/es6-in-depth/)
