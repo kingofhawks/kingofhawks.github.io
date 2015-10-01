@@ -16,6 +16,13 @@ npm install -g http-server
 [nanohttpd](https://github.com/NanoHttpd/nanohttpd) is an embedded HTTP Server for Java.
 
 
+### Tomcat
+
+### Jetty
+
+The above two both support embed usage.
+
+
 Of course you could use IIS for free on Windows.
 
 
