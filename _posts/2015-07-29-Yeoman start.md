@@ -14,7 +14,8 @@ But it will take you some time to start on Windows:
 
 > npm install -g generator-karma generator-angular
 
-5. Generate scaffolding project for AngularJS
+5. Run as administrator tp generate scaffolding project for AngularJS
+
 > mkdir hello
 > cd hello 
 > yo angular
