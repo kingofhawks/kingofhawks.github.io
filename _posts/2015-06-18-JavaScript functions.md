@@ -51,7 +51,7 @@ You can nest a function within a function. The nested (inner) function is privat
 
 Since a nested function is a closure, this means that a nested function can "inherit" the arguments and variables of its containing function. In other words, the inner function contains the scope of the outer function.
 
-### To summarize:
+### To summarize
 
 * The inner function can be accessed only from statements in the outer function.
 * The inner function forms a closure: the inner function can use the arguments and variables of the outer function, while the outer function cannot use the arguments and variables of the inner function.
@@ -144,23 +144,197 @@ myConcat("; ", "elephant", "giraffe", "lion", "cheetah");
 myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 </code></pre>
 
-## The IIFE Pattern: Introducing a New Scope
+## IIFE Pattern: Introducing a New Scope
+
+This pattern is very important and adopted by most popular JavaScript libraries.
 
 Sometimes you want to introduce a new variable scope—for example, *to prevent a variable from becoming global*. In JavaScript, you can’t use a block to do so; you must use a function. But there is a pattern for using a function in a block-like manner. It is called *IIFE* (immediately invoked function expression, pronounced “iffy”):
 <code><pre>
 (function () {  // open IIFE
     var tmp = ...;  // not a global variable
 }());  // close IIFE
+
+//alternative with less parentheses
+!function () {
+    console.log('watch out!');
+}();
 </code></pre>
 
 Be sure to type the preceding example exactly as shown (apart from the comments). An IIFE is a function expression that is called immediately after you define it. Inside the function, a new scope exists, preventing tmp from becoming global. Consult [Introducing a New Scope via an IIFE](http://speakingjs.com/es5/ch16.html#iife) for details on IIFEs.
 
 
+## Invoking Functions
+
+There are four methods to invoke functions
+
+* as functions
+
+* as methods: call functions on object
+
+* as constructs: new FunctionName()
+
+* through call() and apply() methods
+
+
+## Function Parameters
+
+You can access function parameters with "arguments" array.
+
+ES6 brings us default&rest parameters.
+
+### Default Parameter
+<pre>
+<code>
+//ES5 style
+function hello(name){
+    name = name || 'simon';
+    console.log('hello'+name);
+}
+
+//ES6 style
+function hello(name='simon'){
+    console.log('hello'+name);
+}
+hello()
+</code>
+</pre>
+
+### Rest Parameters
+Rest replaces the need for *arguments* and addresses common cases more directly
+<pre>
+<code>
+function push(array, ...items) {
+  items.forEach(function(item) {
+    array.push(item);
+    console.log(item);
+  });
+}
+
+var a = [];
+push(a, 1, 2, 3)
+</code>
+</pre>
+
+### Three main Difference between rest parameters and "arguments" object
+
+* rest parameters are only the ones that haven't been given a separate name, while "arguments" contains all arguments passed to the function;
+
+* "arguments" is not a real array, while rest parameters are Array instances, meaning methods like sort, map, forEach etc can be applied on it;
+
+* "arguments" has additional functionality specific to itself (like the callee property).
+
+
+### Spread Parameters
+
+"Spread" seems inversion for Rest parameters, it turns array into consecutive arguments.
+<pre>
+<code>
+function add(x, y) {
+  return x + y;
+}
+
+var numbers = [4, 38];
+add(...numbers) // 42
+
+// good
+const itemsCopy = [...numbers];
+</code>
+</pre>
+
+
+
+## Arrow Functions
+
+An arrow function expression (also known as fat arrow function) has a shorter syntax compared to function expressions and lexically binds the this value (does not bind its own this, arguments, super, or new.target). Arrow functions are always anonymous.
+
+<pre>
+<code>
+// Basic syntax:
+(param1, param2, paramN) => { statements }
+(param1, param2, paramN) => expression
+   // equivalent to:  => { return expression; }
+
+// Parentheses are optional when there's only one argument:
+singleParam => { statements }
+singleParam => expression
+
+// A function with no arguments requires parentheses:
+() => { statements }
+
+// Advanced:
+// Parenthesize the body to return an object literal expression:
+params => ({foo: bar})
+
+// Rest parameters are supported
+(param1, param2, ...rest) => { statements }
+</code>
+</pre>
+
+
+## Method Chaining
+When working with jQuery, you will find code like:
+<pre>
+<code>
+// Find all headers, map to their ids, convert to an array and sort them
+$(":header").map(function() { return this.id }).get().sort();
+</code>
+</pre>
+
+
+## "this" 
+Note that *this* is a keyword, not a variable or property name. JavaScript syntax does
+not allow you to assign a value to this.
+
+Unlike variables, the this keyword does not have a scope, and nested functions do not
+inherit the this value of their caller. If a nested function is invoked as a method, its
+this value is the object it was invoked on. If a nested function is invoked as a function
+then its this value will be either the global object (non-strict mode) or undefined (strict
+mode). It is a common mistake to assume that a nested function invoked as a function
+can use this to obtain the invocation context of the outer function. If you want to access
+the this value of the outer function, you need to store that value into a variable that is
+in scope for the inner function. It is common to use the variable self for this purpose.
+
+<pre>
+<code>
+var o = {                           // An object o.
+    m: function() {                 // Method m of the object.
+        var self = this;            // Save the this value in a variable.
+        console.log(this === o);    // Prints "true": this is the object o.
+        f();                        // Now call the helper function f().
+        function f() {              // A nested function f
+           console.log(this === o); // "false": this is global or undefined
+           console.log(self === o); // "true": self is the outer this value.
+        }
+    }
+};
+o.m(); 
+</code>
+</pre>
+
+
+
+
 References:
 * [Mozilla MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions)
+
 * [Self-Executing Anonymous Functions](http://markdalgleish.com/2011/03/self-executing-anonymous-functions/)
+
 * [Immediately-Invoked Function Expression (IIFE)](http://benalman.com/news/2010/11/immediately-invoked-function-expression/)
+
 * [speakingjs](http://speakingjs.com/es5/ch01.html#_functions)
+
 * [exploring-es6](https://leanpub.com/exploring-es6/read)
+
+* [essentialjsdesignpatterns](https://github.com/addyosmani/essential-js-design-patterns)
+
+* [Design-Patterns-in-Javascript](https://github.com/tcorral/Design-Patterns-in-Javascript)
+
+* [Arrow Functions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+* [Arrow Functions in depth](https://hacks.mozilla.org/2015/06/es6-in-depth-arrow-functions/)
+
+* [ES6 Tutorial](https://github.com/ruanyf/es6tutorial)
+
+* [JavaScript: The Definitive Guide]
 
 
