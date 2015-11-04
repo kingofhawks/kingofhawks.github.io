@@ -173,7 +173,7 @@ There are four methods to invoke functions
 
 * as constructs: new FunctionName()
 
-* through call() and apply() methods
+* indirectly through call() and apply() methods
 
 
 ## Function Parameters
@@ -312,6 +312,69 @@ o.m();
 </pre>
 
 
+## call() & apply()
+
+call() and apply() allow you to indirectly invoke a function as if it were a method of some other object.It seems to dynamically implement method on any object.
+
+The call() method calls a function with a given this value and arguments provided individually.In ECMAScript 5 strict mode the first argument to call() or apply() becomes the value of this, even if it is a primitive value or null or undefined.
+
+> fun.call(thisArg[, arg1[, arg2[, ...]]])
+
+<pre>
+<code>
+function greet() {
+  var reply = [this.person, 'Is An Awesome', this.role].join(' ');
+  console.log(reply);
+}
+
+var o = {
+  person: 'Douglas Crockford', role: 'Javascript Developer'
+};
+
+greet.call(o); // Douglas Crockford Is An Awesome Javascript Developer
+
+
+//Effect same as
+o.m = greet; // Make f a temporary method of o.
+o.m(); // Invoke it, passing no arguments.
+delete o.m; // Remove the temporary method.
+</code>
+</pre>
+
+<pre>
+<code>
+var animals = [
+  { species: 'Lion', name: 'King' },
+  { species: 'Whale', name: 'Fail' }
+];
+
+for (var i = 0; i < animals.length; i++) {
+  (function(i) {
+    this.print = function() {
+      console.log('#' + i + ' ' + this.species
+                  + ': ' + this.name);
+    }
+    this.print();
+  }).call(animals[i], i);
+}
+</code>
+</pre>
+
+While the syntax of this function is almost identical to that of apply(), the fundamental difference is that call() accepts an argument list, while apply() accepts a single array of arguments.
+
+<pre>
+<code>
+    array_of_numbers = [3,5,2]
+    var biggest = Math.max.apply(Math, array_of_numbers);
+</code>
+</pre>
+
+
+## bind()
+
+The bind() method creates a new function that, when called, has its this keyword set to the provided value, with a given sequence of arguments preceding any provided when the new function is called.
+
+> fun.bind(thisArg[, arg1[, arg2[, ...]]])
 
 
 References:
