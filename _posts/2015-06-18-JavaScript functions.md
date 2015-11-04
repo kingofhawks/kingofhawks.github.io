@@ -76,7 +76,7 @@ function outside(x) {
   function inside(y) {
     return x + y;
   }
-  return inside;
+  return inside; //return the inner function!
 }
 fn_inside = outside(3); // Think of it like: give me a function that adds 3 to whatever you give it
 result = fn_inside(5); // returns 8

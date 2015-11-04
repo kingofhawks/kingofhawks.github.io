@@ -19,7 +19,7 @@ Contibute to many open source projects with Java, C++, Python, JavaScript, PHP e
 
 ## [Google](https://github.com/google)
 
-Java, Python, Go, JavaScript etc.
+Java, Python, Go, JavaScript, Material Design etc.
 
 * material-design-lite
 
@@ -85,6 +85,19 @@ Java, Android, JavaScript especially in time-series data processing.
 * cube
 
 * cubism
+
+
+## [Linkedin](https://github.com/linkedin)
+Java, JavaScript
+
+* Rest.li
+
+* PalDB
+
+* dustjs
+
+* databus
+
 
 ## [Hubspot](https://github.com/HubSpot)
 
