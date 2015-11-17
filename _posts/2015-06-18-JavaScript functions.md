@@ -281,7 +281,7 @@ $(":header").map(function() { return this.id }).get().sort();
 </pre>
 
 
-## "this" 
+## "this" keyword 
 Note that *this* is a keyword, not a variable or property name. JavaScript syntax does
 not allow you to assign a value to this.
 
@@ -308,6 +308,24 @@ var o = {                           // An object o.
     }
 };
 o.m(); 
+</code>
+</pre>
+
+<pre>
+<code>
+function counter() {
+var n = 0;
+return {
+count: function() { return n++; },
+reset: function() { n = 0; }
+};
+}
+var c = counter(), d = counter(); // Create two counters
+c.count() // => 0
+d.count() // => 0: they count independently
+c.reset() // reset() and count() methods share state
+c.count() // => 0: because we reset c
+d.count() // => 1: d was not reset
 </code>
 </pre>
 
