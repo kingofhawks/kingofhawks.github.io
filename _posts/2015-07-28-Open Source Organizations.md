@@ -199,6 +199,22 @@ JavaScript
 * SimianArmy
 
 
+
+## [etsy](https://github.com/etsy)
+
+Handcraft website, Java, Python, Go etc.
+
+* statsd
+
+* deployinator
+
+* hound
+
+* logster
+
+* skyline
+
+
 ## [Guardian](https://github.com/guardian)
 
 * Scribe
