@@ -2,11 +2,15 @@ Open source big players:
 
 ## [Facebook](https://github.com/facebook)
 
-Contibute to many open source projects with Java, C++, Python, JavaScript, PHP etc.
+Contibute to many open source projects with JavaScript, Java, C++, Python, PHP etc.
 
 * React
 
+* react-native
+
 * flux
+
+* relay
 
 * folly
 
@@ -16,12 +20,30 @@ Contibute to many open source projects with Java, C++, Python, JavaScript, PHP e
 
 * nuclide
 
+* rocksdb
+
+* flow
+
+* jest
+
+* watchman
+
+* fresco
+
+* GraphQL
+
+* regenerator
+
 
 ## [Google](https://github.com/google)
 
-Java, Python, Go, JavaScript, Material Design etc.
+Java, Android, Python, Go, JavaScript, Material Design etc.
+
+* AngularJS
 
 * material-design-lite
+
+* traceur-compiler
 
 * protobuf
 
@@ -31,20 +53,27 @@ Java, Python, Go, JavaScript, Material Design etc.
 
 * bazel
 
-* traceur-compiler
-
 * gxui
 
 * web-starter-kit
 
 * webkit
 
-* AngularJS
+* gson
+
+* go
+
+* closure-library
+
+* lovefield
+
+* tensorflow
+
 
 
 ## [Twitter](https://github.com/twitter)
 
-Scala in depth, Java, CSS, JavaScript etc.
+Scala in depth, Java, CSS, JavaScript etc. *But seems Twitter is moving from Scala to Java now.*
 
 * BootStrap
 
@@ -62,13 +91,19 @@ Scala in depth, Java, CSS, JavaScript etc.
 
 * hogan.js
 
+* commons
+
 
 
 ## [Square](https://github.com/square)
 
-Java, Android, JavaScript especially in time-series data processing.
+Java, Android, JavaScript especially in time-series data processing, also Go.
+
+* retrofit
 
 * okhttp
+
+* dagger
 
 * picasso
 
@@ -80,15 +115,19 @@ Java, Android, JavaScript especially in time-series data processing.
 
 * tape
 
-* dagger
-
 * cube
 
 * cubism
 
+* leakcanary
+
+* wire
+
+* sqlbrite
+
 
 ## [Linkedin](https://github.com/linkedin)
-Java, JavaScript
+Java, JavaScript, Go, Python
 
 * Rest.li
 
@@ -98,10 +137,12 @@ Java, JavaScript
 
 * databus
 
+* hopscotch
+
 
 ## [Hubspot](https://github.com/HubSpot)
 
-JavaScript, CSS
+JavaScript, CSS, Java
 
 * tether
 
@@ -116,6 +157,9 @@ JavaScript, CSS
 * vex
 
 * youmightnotneedjquery
+
+* odometer
+
 
 
 ## [Mozilla](https://github.com/mozilla)
@@ -139,11 +183,36 @@ JavaScript in depth. Python etc
 * togetherjs
 
 
+## [Microsoft](https://github.com/Microsoft)
+
+JavaScript 
+
+* TypeScript
+
+* vscode
+
+
 ## [Netflix](https://github.com/Netflix)
 
 * Hystrix
 
 * SimianArmy
+
+
+
+## [etsy](https://github.com/etsy)
+
+Handcraft website, Java, Python, Go etc.
+
+* statsd
+
+* deployinator
+
+* hound
+
+* logster
+
+* skyline
 
 
 ## [Guardian](https://github.com/guardian)
