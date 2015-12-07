@@ -2,6 +2,38 @@ ES6 is coming, but still a long way till all popular browsers full support it.
 
 There are some ES6 to ES5 transpiler for now.
 
+
+### Default/Rest Parameters
+
+
+### Template String
+
+
+### Class
+
+
+### Arrow Function
+
+
+### Promise
+
+
+### Generators
+
+
+### let & const
+
+
+### for .. of
+
+
+### Modules
+
+
+### Map & Set
+
+
+
 ## Babel
 
 [Babel](http://babeljs.io/) formerly known as 6t05, is the most popular JavaScript compiler:
