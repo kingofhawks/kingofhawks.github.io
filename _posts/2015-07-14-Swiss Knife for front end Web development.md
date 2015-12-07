@@ -32,9 +32,9 @@ It is rather hard to install Yeoman under Windows and China, something to be com
 [NPM](https://www.npmjs.com/) is the package manager for Node.It comes with Node now.
 
 
-### NPM browserify
+### Browserfy
 
-Browsers don't have the require method defined, but Node.js does. With [Browserify](http://browserify.org/) you can write code that uses require in the same way that you would use it in Node.
+Browsers don't have the require method defined, but Node.js does. With [Browserify](http://browserify.org/) you can write code that uses require in the same way that you would use it in Node by bundling up all of your dependencies.
 
 
 ### WebPack
@@ -74,6 +74,10 @@ Brunch also support Skeletons which is basically an application boilerplate that
 
 ### SystemJS
 
+### RequireJS
+
+
+
 ## Test
 
 ### Mocha
@@ -86,9 +90,7 @@ Brunch also support Skeletons which is basically an application boilerplate that
 
 ### Chai
 
-
 ### Sinon.js
-
 
 ### ESLint
 
@@ -100,6 +102,7 @@ Brunch also support Skeletons which is basically an application boilerplate that
 - [Task Runner Compare](https://github.com/brunch/brunch-guide/blob/master/content/en/chapter01-whats-brunch.md#brunch-vs-others)
 - [Task Runner Compare2](http://brunch.io/compare.html)
 - [Grunt vs Gulp](http://sixrevisions.com/web-development/grunt-vs-gulp/)
+- [Grunt vs Gulp vs npm](https://ponyfoo.com/articles/choose-grunt-gulp-or-npm)
 - [Module System](http://webpack.github.io/docs/motivation.html)
 - [Install Yoeman on Windows](https://github.com/joyent/node/issues/4356)
 - [Front End Tools](http://reactkungfu.com/2015/07/the-hitchhikers-guide-to-modern-javascript-tooling/?utm_source=javascriptweekly&utm_medium=email)
