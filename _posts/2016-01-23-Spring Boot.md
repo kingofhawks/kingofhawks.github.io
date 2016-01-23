@@ -16,3 +16,19 @@
 
 * Absolutely no code generation and no requirement for XML configuration
 
+* Work with both RDBMS and NoSQL such as MySQL,PostgreSQL,H2,MongoDB,Cassandra,ElasticSearch, Neo4j, Redis, Couchbase
+
+
+### Dependancy
+
+Spring Boot 1.3.3 needs
+
+* Java 7+
+
+* Spring 4.15
+
+
+## References
+
+* [jhipster](http://jhipster.github.io/)
+
