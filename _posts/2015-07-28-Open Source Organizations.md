@@ -71,6 +71,21 @@ Java, Android, Python, Go, JavaScript, Material Design etc.
 
 
 
+
+## [Microsoft](https://github.com/Microsoft)
+
+JavaScript 
+
+* TypeScript
+
+* vscode
+
+* [CNTK](https://github.com/Microsoft/CNTK)
+
+* [ChakraCore](https://github.com/Microsoft/ChakraCore)
+
+
+
 ## [Twitter](https://github.com/twitter)
 
 Scala in depth, Java, CSS, JavaScript etc. *But seems Twitter is moving from Scala to Java now.*
@@ -183,20 +198,16 @@ JavaScript in depth. Python etc
 * togetherjs
 
 
-## [Microsoft](https://github.com/Microsoft)
-
-JavaScript 
-
-* TypeScript
-
-* vscode
-
 
 ## [Netflix](https://github.com/Netflix)
+
+Netflix is a big player with Java,Scala,Gradle.
 
 * Hystrix
 
 * SimianArmy
+
+* Falcor(https://github.com/Netflix/falcor)
 
 
 
