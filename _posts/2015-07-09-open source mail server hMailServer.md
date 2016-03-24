@@ -35,3 +35,13 @@ Installation is very easy:
 * SQL backend
 
 * Web administration
+
+
+### Reference
+[mailcow](http://mailcow.email/)
+[roundcube](https://roundcube.net/)
+[N1](https://github.com/nylas/N1)
+[Mailpile](https://github.com/mailpile/Mailpile)
+[Mailinabox](https://github.com/mail-in-a-box/mailinabox)
+
+
