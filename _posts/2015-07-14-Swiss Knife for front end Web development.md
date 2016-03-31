@@ -37,15 +37,15 @@ It is rather hard to install Yeoman under Windows and China, something to be com
 Browsers don't have the require method defined, but Node.js does. With [Browserify](http://browserify.org/) you can write code that uses require in the same way that you would use it in Node by bundling up all of your dependencies.
 
 
+
+## Build Systems
+
 ### WebPack
 
 [webpack](http://webpack.github.io/docs/) is a module bundler.
 
 webpack takes modules with dependencies and generates static assets representing those modules.
 
-
-
-## Build Systems
 
 ### Grunt
 
@@ -82,13 +82,15 @@ Brunch also support Skeletons which is basically an application boilerplate that
 
 ### Mocha
 
-### PhatomJS
-
 ### Karma
+
+### PhatomJS
 
 ### Jasmine
 
 ### Chai
+
+### Jest
 
 ### Sinon.js
 
