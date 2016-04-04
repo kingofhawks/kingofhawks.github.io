@@ -62,6 +62,53 @@ mysql> show slave status\G
 
 
 
+MySQL5.5 主从复制配置步骤
+
+1. 配置主服务器
+备注：配置主服务器前需要首先暂停服务器使用(停止使用yycoin应用以及所有需要用到数据库的相关程序)。
+关闭mysql服务，在mysql安装目录下找到my.conf,并找到 [mysqld] 部分,加入以下两行:
+[mysqld]
+log-bin=mysql-bin
+server-id=1
+
+改完保存,重启mysql
+
+2. 配置备份服务器
+同样关闭mysql,在my.conf中找到[mysqld]部分，加入一行：
+[mysqld]
+server-id=2
+
+保存重启.
+
+3. 获取主服务器二进制日志坐标(复制起点)
+使用mysql客户端连接服务器,执行以下语句以禁止写入数据库
+mysql> FLUSH TABLES WITH READ LOCK;
+备注：如果断开当前客户端会导致写入锁被释放。
+重新打开一个mysql客户端,执行以下语句获取当前二进制日志文件坐标
+mysql> SHOW MASTER STATUS;
+其中"File"栏位代表日志文件名,"Position"栏位代表复制坐标。 记住这两个栏位的值,后边配置备份服务器时需要用到它们。
+
+
+4. 主服务器数据库做好备份
+shell> mysqldump demo --master-data > d:\demo.db --user=root --password=xxx
+
+5. 在备份服务器导入数据备份
+shell> mysql -u root -pxxxx demo < demo.db
+
+6. 在备份服务器上启动slave线程
+mysql> START SLAVE;
+
+7. 在备份服务器上设置master信息
+mysql> CHANGE MASTER TO
+    ->     MASTER_HOST='主服务器IP',
+    ->     MASTER_USER='root',
+    ->     MASTER_PASSWORD='主服务器数据库访问密码',
+    ->     MASTER_LOG_FILE='步骤3中的File栏位',
+    ->     MASTER_LOG_POS=步骤3中的Position数值;
+    
+8. 配置好之后，可以在主服务器上写入数据,检查备份服务器是否自动同步，也可以在备份服务器上执行以下命令查看复制状态：
+mysql> show slave status\G
+
 
 ### Reference
 http://dev.mysql.com/doc/refman/5.5/en/replication-howto.html
