@@ -14,7 +14,7 @@ Free alternative for AWS S3
 
 ### Riak
 
-### mimio
+### minio
 Go cloud storage compatible with S3
 http://minio.io/
 
