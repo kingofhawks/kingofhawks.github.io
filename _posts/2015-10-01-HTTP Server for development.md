@@ -5,6 +5,14 @@ If you installed Python, then you can start a simple HTTP server:
 
 > python -m SimpleHTTPServer 8080
 
+
+### nginx  
+Support both linux and windows now
+
+
+### Apache
+
+
 ### Node http server
 npm install -g http-server
 
@@ -18,12 +26,16 @@ npm install -g http-server
 
 ### Tomcat
 
+
 ### Jetty
 
 The above two both support embed usage.
 
 
 Of course you could use IIS for free on Windows.
+
+### Reference
+[nginx](http://nginx.org/en/docs/windows.html)
 
 
 
