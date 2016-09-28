@@ -1,9 +1,14 @@
 Log systems
 
-Seems the most popular is ELK(elasticsearch+logstash+kibana)
+Seems the most popular is ELK(elasticsearch+logstash+kibana) which also need redis or Kafka.  
 
-### graylog
-Java
+### Splunk
+Commercial. Most powerful.  
+
+### graylog  
+https://github.com/Graylog2/graylog2-server  
+Java,ElasticSearch+MongoDB+Graylog-server+WEB UI  
+Support user authentication and Alert,which is commercial support in ELK stack.  
 
 
 ### elasticsearch
@@ -18,17 +23,26 @@ Ruby
 https://github.com/elastic/kibana
 
 
+### kafka  
+Java   
+Message system with log aggregation solution  
 
-### fluentd
-http://www.fluentd.org/
 
-
-### kafka
+### fluentd  
+http://www.fluentd.org/  
+Ruby  
 
 
 ### flume
 https://github.com/apache/flume
 
+
+### sumologic  
+Commercial  
+
+
+### Loggly  
+Commercial  
 
 
 
