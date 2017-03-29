@@ -112,3 +112,4 @@ mysql> show slave status\G
 
 ### Reference
 http://dev.mysql.com/doc/refman/5.5/en/replication-howto.html
+show processlist
